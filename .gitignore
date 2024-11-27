@@ -1,0 +1,5 @@
+bin/
+**/.DS_STORE
+devbox.lock
+.venv
+.devbox
