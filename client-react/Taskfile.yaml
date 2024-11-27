@@ -1,8 +1,8 @@
 version: "3"
 
 vars:
-  IMAGE_REPO: sidpalas/devops-directive-docker-course-client-react-nginx
-  IMAGE_TAG: foobarbaz
+  IMAGE_REPO: frnn4268/k8s-client-react-nginx
+  IMAGE_TAG: frnn
 
 tasks:
   build-container-image:
