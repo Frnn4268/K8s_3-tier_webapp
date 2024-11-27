@@ -9,6 +9,8 @@ This project is a minimal 3-tier web application designed to demonstrate the set
 
 ![](./readme-assets/request-diagram.png)
 
+It adds a simple load generator written in python and adds a simple database schema to track requests to each API.
+
 ## Technologies Used
 
 - React: The frontend of the application, responsible for rendering the user interface and interacting with the backend APIs to display data. React Query is used to handle data fetching efficiently.
@@ -21,9 +23,7 @@ This project is a minimal 3-tier web application designed to demonstrate the set
 - Docker: Utilized to containerize services like PostgreSQL, ensuring consistent environments and easy deployment across different systems.
 - Taskfile: A task runner that automates common commands for running the various services in the application (such as installing dependencies, running APIs, and starting the load generator).
 - Poetry: A Python dependency manager used to install and manage dependencies for the load generator service.
-
-It adds a simple load generator written in python and adds a simple database schema to track requests to each API.
-
+  
 ## Running the Application
 
 While the whole point of this course is that you probably won't want/need to run the application locally, we can do so as a starting point.
