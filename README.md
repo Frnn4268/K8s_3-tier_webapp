@@ -1,6 +1,6 @@
-# Kubernetes Minimal 3 tier web application
+# Kubernetes Minimal 3-Tier Web Application
 
-This is a minimal 3-tier web application designed to demonstrate the setup and interaction of multiple services within a Kubernetes environment.
+This project is a minimal 3-tier web application designed to demonstrate the setup and interaction of multiple services within a Kubernetes environment.
 
 - **React frontend:** Uses react query to load data from the two apis and display the result.
 - **Node.js and Go APIs:** Both have `/` and `/ping` endpoints. `/` queries the Database for the current time and the number of requests for each api recorded within the database, and `/ping` returns `pong`.
@@ -8,6 +8,19 @@ This is a minimal 3-tier web application designed to demonstrate the setup and i
 - **Python Load Generator:** Queries one of either the Node.js or Go APIs at a configurable speed.
 
 ![](./readme-assets/request-diagram.png)
+
+## Technologies Used
+
+- React: The frontend of the application, responsible for rendering the user interface and interacting with the backend APIs to display data. React Query is used to handle data fetching efficiently.
+- Vite.js: A build tool used to run the React frontend application in development mode. Vite provides fast hot-reloading and optimized builds for React.
+- Node.js: One of the backend APIs, written in Node.js, which handles requests from the frontend and interacts with the PostgreSQL database to retrieve and return data, such as the current time and request count.
+- Go (Golang): The second backend API, written in Go, which serves similar functionality to the Node.js API. It responds to frontend requests and interacts with the database to return data.
+- Containerization: Docker is used for containerizing applications to ensure consistent environments across development and production.
+- PostgreSQL: A relational database used to store and manage data for the application. It is used to track the number of requests for each API and provides the current time via SQL queries.
+- Python: Used for the load generator service. It simulates API traffic by querying either the Node.js or Go API at a configurable rate to generate load for testing purposes.
+- Docker: Utilized to containerize services like PostgreSQL, ensuring consistent environments and easy deployment across different systems.
+- Taskfile: A task runner that automates common commands for running the various services in the application (such as installing dependencies, running APIs, and starting the load generator).
+- Poetry: A Python dependency manager used to install and manage dependencies for the load generator service.
 
 It adds a simple load generator written in python and adds a simple database schema to track requests to each API.
 
