@@ -1,0 +1,6 @@
+docker_build(
+  'frnn4268/k8s-client-react-nginx', 
+  './',
+)
+k8s_yaml('../../k8s_3-tier_webapp_deployment/client-react/Deployment.yaml')
+k8s_resource('client-react-nginx', port_forwards=8080)
