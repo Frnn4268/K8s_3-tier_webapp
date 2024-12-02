@@ -1,0 +1,5 @@
+docker_build(
+  'frnn4268/k8s-load-generator-python', 
+  './',
+)
+k8s_yaml('../../k8s_3-tier_webapp_deployment/load-generator-python/Deployment.yaml')
