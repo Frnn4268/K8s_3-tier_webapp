@@ -1,0 +1,6 @@
+docker_build(
+  'frnn4268/k8s-api-node', 
+  './',
+)
+k8s_yaml('../../k8s_3-tier_webapp_deployment/api-node/Deployment.yaml')
+k8s_resource('api-node', port_forwards=3000)
